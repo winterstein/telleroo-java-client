@@ -83,7 +83,7 @@ public class Telleroo {
 				"sort_code", sort_code,
 				"legal_type", personOrBusiness
 				);
-		JSONObject jobj = post("recpients", vars);
+		JSONObject jobj = post("recipients", vars);
 		return new TRecipient(jobj);
 	}
 
@@ -96,7 +96,9 @@ public class Telleroo {
 
 	private JSONObject post(String endpoint, Map vars) {
 		FakeBrowser fb = new FakeBrowser();
+		fb.setUserAgent(null);
 		fb.setRequestHeader("Authorization", authorisationToken);
+		fb.setDebug(true);
 		String json = fb.post(server+endpoint, vars);
 		return new JSONObject(json);
 	}
