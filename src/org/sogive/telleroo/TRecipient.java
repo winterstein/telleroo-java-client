@@ -8,4 +8,8 @@ public class TRecipient extends TDataObj {
 		super(jobj);
 	}
 
+	public String getName() {
+		return base.getString("name");
+	}
+		
 }

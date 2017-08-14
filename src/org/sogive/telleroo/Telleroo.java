@@ -64,7 +64,6 @@ public class Telleroo {
 		List<TRecipient> accounts = Containers.apply(accs, TRecipient::new);
 		return accounts;
 	}
-
 	
 	/**
 	 * See http://docs.telleroo.com/#recipient-creation
