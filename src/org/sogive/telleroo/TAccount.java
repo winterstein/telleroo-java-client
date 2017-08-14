@@ -11,8 +11,8 @@ public class TAccount extends TDataObj {
 	/**
 	 * @return 100x to avoid floating points. E.g. £1 = 100
 	 */
-	public int getBalance() {
-		return base.getInt("balance");
+	public long getBalance() {
+		return base.getLong("balance");
 	}
 	
 	// TODO
